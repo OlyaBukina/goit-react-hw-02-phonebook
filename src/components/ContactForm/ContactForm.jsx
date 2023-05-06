@@ -20,11 +20,7 @@ const contactsSchema = yup.object().shape({
     .string()
     .min(2, 'Too short name!')
     .required('Name is a required field!'),
-  number: yup
-    .string()
-    .min(9, 'Too short phone number!')
-    .max(10)
-    .required('Number is a required field!'),
+  number: yup.string().required('Number is a required field!'),
 });
 
 export const ContactForm = ({ onSubmit }) => {
